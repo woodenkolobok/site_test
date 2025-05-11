@@ -19,7 +19,7 @@ body {
     justify-content: space-around
 }
 
-.questions_container {
+#questions_container {
     font-size: 3rem;
 }
 #answers_container {
@@ -28,7 +28,7 @@ body {
     gap: 0.5rem;
 }
 
-#answer {
+.answer {
     background-color: rgba(255,255,255,0.1);
     font-size: 2.5rem;
     padding-left: 5rem;
