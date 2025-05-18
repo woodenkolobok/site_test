@@ -32,6 +32,7 @@ body {
     background-color: rgba(255,255,255,0.1);
     font-size: 2.5rem;
     padding-left: 5rem;
+    padding-inline: 0.8rem;
     padding-block: 0.4 rem;
     border-radius: 25px;
 }
@@ -54,4 +55,42 @@ body {
 .answer:hover {
     animation: answer_animation 2s infinite;
 
+}
+
+.skip_button {
+    background-color: blueviolet;
+    padding-inline: 0.4rem;
+    padding-block: 0.2rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: white 2px solid;
+    border-radius: 5px;
+}
+
+@keyframes skip_button_animation {
+    0% {
+        color: white;
+    }
+    50% {
+        color: blue;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.skip_button:hover {
+    animation: skip_button_animation 2s infinite;
+}
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
 }
