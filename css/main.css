@@ -21,6 +21,7 @@ body {
 
 #questions_container {
     font-size: 3rem;
+    text-align: center;
 }
 #answers_container {
     display: grid;
@@ -35,6 +36,10 @@ body {
     padding-inline: 0.8rem;
     padding-block: 0.4 rem;
     border-radius: 25px;
+}
+
+.neutral {
+    background-color: rgba(255,255,255,0.1);
 }
 
 
@@ -57,6 +62,42 @@ body {
 
 }
 
+.buttons_container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+@keyframes next_button_button_animation {
+    0% {
+        color: orange;
+    }
+    50% {
+        color: orangered;
+    }
+    100% {
+        color: orange;
+    }
+}
+
+.next_button:hover {
+    animation: next_button_animation 2s infinite;
+}
+
+.next_button {
+    background-color: orange;
+    padding-inline: 0.4rem;
+    padding-block: 0.2rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    border: white 2px solid;
+    border-radius: 5px;
+}
+
 .skip_button {
     background-color: blueviolet;
     padding-inline: 0.4rem;
@@ -64,9 +105,6 @@ body {
     font-size: 1.5rem;
     width: fit-content;
     height: fit-content;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
     border: white 2px solid;
     border-radius: 5px;
 }
@@ -87,10 +125,36 @@ body {
     animation: skip_button_animation 2s infinite;
 }
 
+@keyframes correct_animations{
+    from {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    to {
+        background-color: green;
+    }
+}
+
+@keyframes wrong_animations {
+    from {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    to {
+        background-color: red;
+    }
+}
+
 .correct {
-    background-color: green;
+    animation: correct_animations 1s 1;
+    animation-fill-mode: forwards;
 }
 
 .wrong {
-    background-color: red;
+    animation: wrong_animations 1s 1;
+    animation-fill-mode: forwards;
+}
+
+.hidden {
+    display: none;
 }
